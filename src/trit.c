@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
+#include <stdlib.h>
 
 
 uint16_t TRIT_MASKS_IN_TRYTE[] = {
