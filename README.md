@@ -30,7 +30,7 @@ Counting is also similar to working with unbalanced bases, but starting with -1,
 <br> <br>
 Tritron also allows for a base 27 hexidecimal analogue representation, called 'Tricunal' or 'tric' 0..9 are represented with numbers, 10..13 are A..D like in hexadecimal, and -1..-13 are Z..N, with Z being -1.
 | Digit | Decimal Value | Trinary |
-|-------|---------------|---------|
+|:-------:|:---------------:|:---------:|
 | N     | -13           | TTT     |
 | O     | -12           | TT0     |
 | P     | -11           | TT1     |
