@@ -33,21 +33,33 @@ int main() {
 
     
     
-    char test[] = "10TT00";
-    char bad[] = "1TT00";
+    // char test[] = "10TT00";
+    // char bad[] = "1TT00";
 
-    int buff_size = 6;
+    // int buff_size = 6;
+    // char *buff; 
+    // buff = (char *)malloc(sizeof(char)*(buff_size+1));
+    // buff[buff_size+1] = '\0';
+    // if(buff == NULL){
+    //     printf("error\n");
+    //     return 1;
+    // }
+
+    str2Tryte_27("R6", &t);
+    shortPrintBinary(t.tryte);
+
+    int buff_size = 2;
     char *buff; 
     buff = (char *)malloc(sizeof(char)*(buff_size+1));
-    buff[buff_size+1] = '\0';
+    buff[buff_size] = '\0';
     if(buff == NULL){
         printf("error\n");
         return 1;
     }
-
-    tryte2Str_3(&t, buff);
+    tryte2Str_27(&t, buff);
     printf(buff);
-    // str2Tryte_3(test, &t);
-    // shortPrintBinary(t.tryte);
+    printf("\n");
+    
+    free(buff);
     return 0;
 }
