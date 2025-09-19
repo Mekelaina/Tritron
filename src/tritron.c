@@ -29,19 +29,24 @@ int main() {
     //0b0001001100110000
 
     Tryte_t t;
-    //t.tryte = 0b0001001100110000;
+    t.tryte = 0b0001001100110000;
 
     
     
     char test[] = "10TT00";
     char bad[] = "1TT00";
 
-    str2Tryte_3(test, &t);
-    shortPrintBinary(t.tryte);
+    int buff_size = 6;
+    char *buff; 
+    buff = (char *)malloc(sizeof(char)*(buff_size+1));
+    buff[buff_size+1] = '\0';
+    if(buff == NULL){
+        printf("error\n");
+        return 1;
+    }
 
-    str2Tryte_3(bad, &t);
-    shortPrintBinary(t.tryte);
-    
+    tryte2Str_3(&t, buff);
+    printf(buff);
     // str2Tryte_3(test, &t);
     // shortPrintBinary(t.tryte);
     return 0;

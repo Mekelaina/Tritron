@@ -134,7 +134,9 @@ void tryte2Str_3(Tryte_t *T, char *__S) {
     UnpackedTryte_t u;
     unpackTryte(T, &u);
 
-    for(int i = 0; 0 < TRYTE_STR_LEN_3; i++){
+    for(int i = 0; i < TRYTE_STR_LEN_3; i++){
+        //printf("%d\n", i);
+        //printf("a\n");
         Trit_t x = u.trits[i];
         switch(x){
             case TRIT_FALSE:
