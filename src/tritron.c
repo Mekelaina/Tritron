@@ -31,7 +31,8 @@ int main() {
     Tryte_t t;
     t.tryte = 0b0001001100110000;
 
-    
+    printf("%lld\n", TLONG_MAX);
+    printf("%lld\n", TLONG_MIN);
     
     // char test[] = "10TT00";
     // char bad[] = "1TT00";
