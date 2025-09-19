@@ -3,11 +3,11 @@
 Tritron is a framework and virtual machine for Trit based computing. Built as both an expirament with the concept and a personal time killer. Please note the code is a heavy WIP and is provided <b>as is</b>. Bug reports and contributions are welcome, if you find this interesting or useful. But just know what you are getting into.
 
 ## What is a 'Trit'?
-A trit (<b>Tr</b>inary Dig<b>it</b>) is the base 3 analogue to the bit that makes up most computing. However, instead of having 2 possible states like a bit (`0`, `1`), a trit has 3 (`0`, `1`, `2`). Thus making any system using trits 'Trinary'.
+A trit (<b>Tr</b>inary Dig<b>it</b>) is the base 3 analogue to the bit that makes up most computing. However, instead of having 2 possible states like a bit (`0`, `1`), a trit has 3 (`0`, `1`, `2`). Thus making any system using trits '[Trinary](https://en.wikipedia.org/wiki/Ternary_numeral_system)'.
 <br><br>
-To be more specific, Tritron uses 'Balanced Trinary' where the 3 possible states are `-1`, `0`, and `1`. Using a balanced base has many interesting and useful properties, and there were even some early computers that had balenced ternary based architectures.
+To be more specific, Tritron uses '[Balanced Trinary](https://en.wikipedia.org/wiki/Balanced_ternary)' where the 3 possible states are `-1`, `0`, and `1`. Using a balanced base has many interesting and useful properties, and there were even some [early computers](https://en.wikipedia.org/wiki/Setun) that had balenced ternary based architectures.
 <br><br>
-In Tritron, `-1` is False and `1` is True, with `0` being logically Unknown/uncertain.
+In Tritron, `-1` is False and `1` is True, with `0` being [logically unknown/uncertain](https://en.wikipedia.org/wiki/Three-valued_logic).
 
 ## Trytes and Repersentaions
 A tryte is the trit version of a byte. However, at least in Tritron, 1 tryte is 6 trits. This was done both to make the amount of values stored in a tryte roughly comparible to that of a byte (729 possible states, or -364 to 364 including 0), and to make a single tryte repersentable in 2 bytes. (one byte is a tribble/3 trits). Each digit of a tribble is represented by two bits where:<br>
