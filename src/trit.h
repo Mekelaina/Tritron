@@ -44,38 +44,28 @@
     function arguments that are modified are prefixed with a double underscore 
         
 */
-#define MASK_TRIT_0 0b00000011
-#define MASK_TRIT_1 0b00001100
-#define MASK_TRIT_2 0b00110000
 
-#define SHIFT_TRIT_0 0
-#define SHIFT_TRIT_1 2
-#define SHIFT_TRIT_2 4
+//array of bit masks for each trit, depending on the value
+extern uint16_t TRIT_MASKS_IN_TRYTE[];
+
+/* =========== Trit primitive constants =========== */
 
 //Maximum base 10 value repersented in one Tryte
 #define TRYTE_MAX  364
 //Minimum base 10 value repersented in one Tryte
 #define TRYTE_MIN -364
+//Number of Trits in a Tryte
+#define TRYTE_TRIT_SIZE 6
+//Number of bytes a Tryte takes up
+#define TRYTE_BYTE_SIZE 2
+
+//Maximum base 10 value represented in one tshort (2x trytes)
+#define TSHORT_MAX  265720
+//Minimum base 10 value represented in one tshort (2x trytes)
+#define TSHORT_MIN -265720
 
 
 
-extern uint16_t TRIT_MASKS_IN_TRYTE[];
-// uint16_t TRIT_MASKS_IN_TRYTE[] = {
-//     //False/Unknown
-//     0b0000000000000011, //L_LST
-//     0b0000000000001100,
-//     0b0000000000110000, //L_MST
-//     0b0000001100000000, //H_LST
-//     0b0000110000000000,
-//     0b0011000000000000, //H_MST
-//     //True
-//     0b0000000000000001, 
-//     0b0000000000000100,
-//     0b0000000000010000, 
-//     0b0000000100000000, 
-//     0b0000010000000000,
-//     0b0001000000000000
-// };
 
 //Trit states. one byte
 typedef enum __attribute__((packed)) Trit {

@@ -30,22 +30,22 @@ Trit_t getTritInTryte(Tryte_t *T, uint8_t index) {
 
         switch(index){
             case 0:
-                buff = (T->tribble_L & MASK_TRIT_0) >> SHIFT_TRIT_0;
+                buff = (T->tribble_L & 0b00000011) >> 0;
                 break; 
             case 1:
-                buff = (T->tribble_L & MASK_TRIT_1) >> SHIFT_TRIT_1;
+                buff = (T->tribble_L & 0b00001100) >> 2;
                 break; 
             case 2:
-                buff = (T->tribble_L & MASK_TRIT_2) >> SHIFT_TRIT_2;
+                buff = (T->tribble_L & 0b00110000) >> 4;
                 break; 
             case 3:
-                buff = (T->tribble_H & MASK_TRIT_0) >> SHIFT_TRIT_0;
+                buff = (T->tribble_H & 0b00000011) >> 0;
                 break; 
             case 4:
-                buff = (T->tribble_H & MASK_TRIT_1) >> SHIFT_TRIT_1;
+                buff = (T->tribble_H & 0b00001100) >> 2;
                 break; 
             case 5:
-                buff = (T->tribble_H & MASK_TRIT_2) >> SHIFT_TRIT_2;
+                buff = (T->tribble_H & 0b00110000) >> 4;
                 break; 
         }
         rtn = buff;
