@@ -60,7 +60,9 @@ const uint8_t TINT_TRIT_SIZE = 24;
 //Number of bytes a tint takes up
 const uint8_t TINT_BYTE_SIZE =  8;
 
-//TODO: Arbitrary precision int types
+
+
+/* //TODO: Arbitrary precision int types
 //Maximum base 10 value repersented in one tlong (8x trytes)
 const __int128_t TLONG_MAX =  39883221538436254931680;
 //Minimum base 10 value repersented in one tlong (8x trytes)
@@ -68,7 +70,7 @@ const __int128_t TLONG_MIN = -39883221538436254931680;
 //Number of trits in a tlong
 const uint8_t TLONG_TRIT_SIZE = 48;
 //Number of bytes a tlong takes up
-const uint8_t TLONG_BYTE_SIZE = 16;
+const uint8_t TLONG_BYTE_SIZE = 16; */
 
 // ========= Packed Tryte ===========
 Trit_t getTritInTryte(Tryte_t *T, uint8_t index) {

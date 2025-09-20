@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "trit.h"
-#include "strtrit.h"
+#include "tritlib/trit.h"
+#include "tritlib/strtrit.h"
 
 
 void bytePrintBinary(uint8_t num) {
@@ -31,8 +31,8 @@ int main() {
     Tryte_t t;
     t.tryte = 0b0001001100110000;
 
-    printf("%lld\n", TLONG_MAX);
-    printf("%lld\n", TLONG_MIN);
+    // printf("%lld\n", TLONG_MAX);
+    // printf("%lld\n", TLONG_MIN);
     
     // char test[] = "10TT00";
     // char bad[] = "1TT00";

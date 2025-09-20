@@ -72,7 +72,7 @@ extern const int32_t TSHORT_MAX;
 //Minimum base 10 value represented in one tshort (2x trytes)
 extern const int32_t TSHORT_MIN;
 //Number of trits in a tshort
-extern uint8_t TSHORT_TRIT_SIZE;
+extern const uint8_t TSHORT_TRIT_SIZE;
 //Number of bytes a tshort takes up
 extern const uint8_t TSHORT_BYTE_SIZE;
 
@@ -85,14 +85,14 @@ extern const uint8_t TINT_TRIT_SIZE;
 //Number of bytes a tint takes up
 extern const uint8_t TINT_BYTE_SIZE;
 
-//Maximum base 10 value repersented in one tlong (8x trytes)
+/* //Maximum base 10 value repersented in one tlong (8x trytes)
 extern const __int128_t TLONG_MAX;
 //Minimum base 10 value repersented in one tlong (8x trytes)
 extern const __int128_t TLONG_MIN;
 //Number of trits in a tlong
 extern const uint8_t TLONG_TRIT_SIZE;
 //Number of bytes a tlong takes up
-extern const uint8_t TLONG_BYTE_SIZE;
+extern const uint8_t TLONG_BYTE_SIZE; */
 
 
 
