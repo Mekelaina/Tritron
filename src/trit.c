@@ -22,6 +22,54 @@ uint16_t TRIT_MASKS_IN_TRYTE[] = {
     0b0001000000000000
 };
 
+/* =========== Trit primitive constants =========== */
+
+//Maximum base 10 value repersented in one tribble
+const int8_t  TRIBBLE_MAX =  13;
+//Minimum base 10 value repersented in one tribble
+const int8_t  TRIBBLE_MIN = -13;
+//Number of trits in a tribble
+const uint8_t TRIBBLE_TRIT_SIZE = 3;
+//Number of bytes a tribble takes up
+const uint8_t TRIBBLE_BYTE_SIZE = 1;
+
+//Maximum base 10 value repersented in one tryte (2x tribble)
+const int16_t TRYTE_MAX =  364;
+//Minimum base 10 value repersented in one tryte (2x tribble)
+const int16_t TRYTE_MIN = -364;
+//Number of Trits in a Tryte
+const uint8_t TRYTE_TRIT_SIZE = 6;
+//Number of bytes a Tryte takes up
+const uint8_t TRYTE_BYTE_SIZE = 2;
+
+//Maximum base 10 value represented in one tshort (2x trytes)
+const int32_t TSHORT_MAX =  265720;
+//Minimum base 10 value represented in one tshort (2x trytes)
+const int32_t TSHORT_MIN = -265720;
+//Number of trits in a tshort
+const uint8_t TSHORT_TRIT_SIZE = 12;
+//Number of bytes a tshort takes up
+const uint8_t TSHORT_BYTE_SIZE =  4;
+
+//Maximum base 10 value represented in one tint (4x trytes)
+const int64_t TINT_MAX =  141214768240;
+//Minimum base 10 value represented in one tint (4x trytes)
+const int64_t TINT_MIN = -141214768240;
+//Number of trits in a tint
+const uint8_t TINT_TRIT_SIZE = 24;
+//Number of bytes a tint takes up
+const uint8_t TINT_BYTE_SIZE =  8;
+
+//TODO: Arbitrary precision int types
+//Maximum base 10 value repersented in one tlong (8x trytes)
+const __int128_t TLONG_MAX =  39883221538436254931680;
+//Minimum base 10 value repersented in one tlong (8x trytes)
+const __int128_t TLONG_MIN = -39883221538436254931680;
+//Number of trits in a tlong
+const uint8_t TLONG_TRIT_SIZE = 48;
+//Number of bytes a tlong takes up
+const uint8_t TLONG_BYTE_SIZE = 16;
+
 // ========= Packed Tryte ===========
 Trit_t getTritInTryte(Tryte_t *T, uint8_t index) {
     Trit_t rtn = TRIT_UNKNOWN;

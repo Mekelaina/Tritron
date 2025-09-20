@@ -2,7 +2,6 @@
 #define TRITRON_TRIT
 
 #include <stdint.h>
-#include <stdbool.h>
 
 /*
     ========== Definitions ==========
@@ -51,49 +50,49 @@ extern uint16_t TRIT_MASKS_IN_TRYTE[];
 /* =========== Trit primitive constants =========== */
 
 //Maximum base 10 value repersented in one tribble
-const int8_t  TRIBBLE_MAX =  13;
+extern const int8_t  TRIBBLE_MAX;
 //Minimum base 10 value repersented in one tribble
-const int8_t  TRIBBLE_MIN = -13;
+extern const int8_t  TRIBBLE_MIN;
 //Number of trits in a tribble
-const uint8_t TRIBBLE_TRIT_SIZE = 3;
+extern const uint8_t TRIBBLE_TRIT_SIZE;
 //Number of bytes a tribble takes up
-const uint8_t TRIBBLE_BYTE_SIZE = 1;
+extern const uint8_t TRIBBLE_BYTE_SIZE;
 
 //Maximum base 10 value repersented in one tryte (2x tribble)
-const int16_t TRYTE_MAX =  364;
+extern const int16_t TRYTE_MAX;
 //Minimum base 10 value repersented in one tryte (2x tribble)
-const int16_t TRYTE_MIN = -364;
+extern const int16_t TRYTE_MIN;
 //Number of Trits in a Tryte
-const uint8_t TRYTE_TRIT_SIZE = 6;
+extern const uint8_t TRYTE_TRIT_SIZE;
 //Number of bytes a Tryte takes up
-const uint8_t TRYTE_BYTE_SIZE = 2;
+extern const uint8_t TRYTE_BYTE_SIZE;
 
 //Maximum base 10 value represented in one tshort (2x trytes)
-const int32_t TSHORT_MAX =  265720;
+extern const int32_t TSHORT_MAX;
 //Minimum base 10 value represented in one tshort (2x trytes)
-const int32_t TSHORT_MIN = -265720;
+extern const int32_t TSHORT_MIN;
 //Number of trits in a tshort
-const uint8_t TSHORT_TRIT_SIZE = 12;
+extern uint8_t TSHORT_TRIT_SIZE;
 //Number of bytes a tshort takes up
-const uint8_t TSHORT_BYTE_SIZE =  4;
+extern const uint8_t TSHORT_BYTE_SIZE;
 
 //Maximum base 10 value represented in one tint (4x trytes)
-const int64_t TINT_MAX =  141214768240;
+extern const int64_t TINT_MAX;
 //Minimum base 10 value represented in one tint (4x trytes)
-const int64_t TINT_MIN = -141214768240;
+extern const int64_t TINT_MIN;
 //Number of trits in a tint
-const uint8_t TINT_TRIT_SIZE = 24;
+extern const uint8_t TINT_TRIT_SIZE;
 //Number of bytes a tint takes up
-const uint8_t TINT_BYTE_SIZE =  8;
+extern const uint8_t TINT_BYTE_SIZE;
 
 //Maximum base 10 value repersented in one tlong (8x trytes)
-const __int128_t TLONG_MAX =  39883221538436254931680;
+extern const __int128_t TLONG_MAX;
 //Minimum base 10 value repersented in one tlong (8x trytes)
-const __int128_t TLONG_MIN = -39883221538436254931680;
+extern const __int128_t TLONG_MIN;
 //Number of trits in a tlong
-const uint8_t TLONG_TRIT_SIZE = 48;
+extern const uint8_t TLONG_TRIT_SIZE;
 //Number of bytes a tlong takes up
-const uint8_t TLONG_BYTE_SIZE = 16;
+extern const uint8_t TLONG_BYTE_SIZE;
 
 
 
