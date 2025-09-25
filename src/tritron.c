@@ -52,20 +52,21 @@ int main() {
     //     return 1;
     // }
 
-    Tshort_t a;
-    Tint_t b;
-    Tlong_t c;
-    UnpackedTshort_t ax;
-    UnpackedTint_t bx;
-    UnpackedTlong_t cx;
+    Tshort_t a, c;
+    c.tshort = 0x00;
+    UnpackedTshort_t b;
 
-    printf("tshort: %lld, unpacked: %lld\n", sizeof(a), sizeof(ax));
-    printf("tint: %lld, unpacked: %lld\n", sizeof(b), sizeof(bx));
-    printf("tlong: %lld, unpacked: %lld\n", sizeof(c), sizeof(cx));
-
+    //00010011001100000011000100010011
     a.tryte_L.tryte = 0b0011000100010011;
     a.tryte_H.tryte = 0b0001001100110000;
 
+    unpackTshort(&a, &b);
+    intPrintBinary(c.tshort);
+    printf("A\n");
     intPrintBinary(a.tshort);
+    packTshort(&b, &c);
+
+    printf("C\n");
+    intPrintBinary(c.tshort);
     return 0;
 }

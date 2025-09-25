@@ -169,6 +169,7 @@ typedef union  {
     };
 } UnpackedTint_t;
 
+
 typedef union {
     Trit_t trits[TLONG_TRIT_SIZE];
     struct {
@@ -223,7 +224,7 @@ void packTshort(UnpackedTshort_t *U, Tshort_t *__T);
 
 // ========= Tint Functions ==========
 void unpackTint(Tint_t *T, UnpackedTint_t *__U);
-void packTint(UnpackedTint_t *U, Tint_t *__U);
+void packTint(UnpackedTint_t *U, Tint_t *__T);
 
 // ========= Tlong Functions ==========
 void unpackTlong(Tlong_t *T, UnpackedTlong_t *__U);

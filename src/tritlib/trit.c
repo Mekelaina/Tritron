@@ -221,3 +221,38 @@ void notTryte(Tryte_t *__T){
 }
 
 
+// ========= Tshort operations ========
+
+
+void unpackTshort(Tshort_t *T, UnpackedTshort_t *__U) {
+    unpackTryte(&(T->tryte_L), &(__U->tryte_L));
+    unpackTryte(&(T->tryte_H), &(__U->tryte_H));
+}
+
+void packTshort(UnpackedTshort_t *U, Tshort_t *__T) {
+    packTryte(&(U->tryte_L), &(__T->tryte_L));
+    packTryte(&(U->tryte_H), &(__T->tryte_H));
+}
+
+// ========= Tint Functions ==========
+
+
+void unpackTint(Tint_t *T, UnpackedTint_t *__U){
+    unpackTryte(&(T->tshort_L.tryte_L), &(__U->b_L));
+    unpackTryte(&(T->tshort_L.tryte_H), &(__U->b_H));
+    unpackTryte(&(T->tshort_H.tryte_L), &(__U->a_L));
+    unpackTryte(&(T->tshort_H.tryte_H), &(__U->a_H));
+}
+
+void packTint(UnpackedTint_t *U, Tint_t *__T) {
+    packTryte(&(U->b_L), &(__T->tshort_L.tryte_L));
+    packTryte(&(U->b_H), &(__T->tshort_L.tryte_H));
+    packTryte(&(U->a_L), &(__T->tshort_H.tryte_L));
+    packTryte(&(U->a_H), &(__T->tshort_H.tryte_H));
+}
+
+// ========= Tlong Functions ==========
+
+
+void unpackTlong(Tlong_t *T, UnpackedTlong_t *__U);
+void packTlong(UnpackedTlong_t *U, Tlong_t *__T);
