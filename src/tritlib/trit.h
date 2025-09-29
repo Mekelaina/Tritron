@@ -149,6 +149,7 @@ typedef union  {
     Trit_t trits[TRYTE_TRIT_SIZE];
     struct {
         Trit_t t0, t1, t2, t3, t4, t5;
+        //Trit_t t5, t4, t3, t2, t1, t0;
     };
 
 } UnpackedTryte_t ;

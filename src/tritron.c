@@ -30,51 +30,27 @@ int main() {
     // uint8_t _T00 = 0b00110000; //0x30
     // uint8_t _111 = 0b00010101; //0x15
 
-    //1 0 3 3 0 0 
-    //10TT00
-    //0b0001001100110000
-
-    // Tryte_t t;
-    // t.tryte = 0b0001001100110000;
-
-    // printf("%lld\n", TLONG_MAX);
-    // printf("%lld\n", TLONG_MIN);
     
-    // char test[] = "10TT00";
-    // char bad[] = "1TT00";
-
-    // int buff_size = 6;
-    // char *buff; 
-    // buff = (char *)malloc(sizeof(char)*(buff_size+1));
-    // buff[buff_size+1] = '\0';
-    // if(buff == NULL){
-    //     printf("error\n");
-    //     return 1;
-    // }
-
-    Tshort_t a, c;
-    c.tshort = 0x00;
-    UnpackedTshort_t b;
-
     //00010011001100000011000100010011
-    a.tryte_L.tryte = 0b0011000100010011; //T0110T
-    a.tryte_H.tryte = 0b0001001100110000; //10TT00
-    unpackTshort(&a, &b);
-    printf("[%i, %i]\n", b.tryte_H.t0, b.tryte_H.t5);
-    for (int i = 0; i < TSHORT_TRIT_SIZE; i++){
-        Trit_t x = b.trits[i];
-        switch (x) {
-            case TRIT_FALSE:
-                printf("T");
-                break;
-            case TRIT_UNKNOWN:
-                printf("0");
-                break;
-            case TRIT_TRUE:
-                printf("1");
-                break;
-        }    
-    }
-    printf("\n");
+    //a.tryte_L.tryte = 0b0011000100010011; //T0110T
+    //a.tryte_H.tryte = 0b0001001100110000; //10TT00
+  
+    Tryte_t a; 
+    UnpackedTryte_t b;
+    // a.tryte = 0b0001001100110000;
+    // unpackTryte(&a, &b);
+    // for(int i = 0; i < TRYTE_TRIT_SIZE; i++){
+    //     printf("%d", b.trits[i]);
+    // }
+    // printf("\n");
+    // shortPrintBinary(a.tryte);
+    b.t5 = 1;
+    b.t4 = 0;
+    b.t3 = 3;
+    b.t2 = 3;
+    b.t1 = 0;
+    b.t0 = 0;
+
+    
     return 0;
 }

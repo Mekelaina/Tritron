@@ -134,13 +134,13 @@ void setTritInTryte(Tryte_t *T, Trit_t t, uint8_t index){
 
 // ========= Unpacked Tryte ==========
 void unpackTryte(Tryte_t *T, UnpackedTryte_t *__U){
-    for(int i = 0; i < 6; i++){
-        __U->trits[i] = getTritInTryte(T, i);
+    for(int i = 0; i < TRYTE_TRIT_SIZE; i++){
+        __U->trits[i] = getTritInTryte(T, (TRYTE_TRIT_SIZE-1) - i);
     }
 }
 
 void packTryte(UnpackedTryte_t *U, Tryte_t *__T) {
-    for(int i = 0; i < 6; i++){
+    for(int i = 0; i < TRYTE_TRIT_SIZE; i++){
         setTritInTryte(__T, U->trits[5-i], 5-i);
     }
 }
