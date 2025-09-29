@@ -139,6 +139,8 @@ typedef union {
 } Tlong_t;
 
 
+//TODO: refactor unpacked types to store MST-LST
+//TODO: refactor names of Trytes in larger types
 
 //An alternate tryte repersentation where each Trit is stored
 //as an individual element in an array
@@ -154,8 +156,8 @@ typedef union  {
 typedef union {
     Trit_t trits[TSHORT_TRIT_SIZE];
     struct {
-        UnpackedTryte_t tryte_L;
         UnpackedTryte_t tryte_H;
+        UnpackedTryte_t tryte_L;
     };
 } UnpackedTshort_t;
 

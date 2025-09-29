@@ -13,6 +13,8 @@
 #define TERNERY_DIGIT_0 '0'
 #define TERNERY_DIGIT_T 'T'
 
+//TODO: create easy way to map trit vals to char for printing.
+
 //convert a base 3 string repersentation of a tryte
 //into its usable form. Assumes S is at least size of TRYTE_STR_LEN_3 + '\0'
 //if S is invalid or too small, __T is set to 0 

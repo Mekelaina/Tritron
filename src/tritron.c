@@ -57,16 +57,24 @@ int main() {
     UnpackedTshort_t b;
 
     //00010011001100000011000100010011
-    a.tryte_L.tryte = 0b0011000100010011;
-    a.tryte_H.tryte = 0b0001001100110000;
-
+    a.tryte_L.tryte = 0b0011000100010011; //T0110T
+    a.tryte_H.tryte = 0b0001001100110000; //10TT00
     unpackTshort(&a, &b);
-    intPrintBinary(c.tshort);
-    printf("A\n");
-    intPrintBinary(a.tshort);
-    packTshort(&b, &c);
-
-    printf("C\n");
-    intPrintBinary(c.tshort);
+    printf("[%i, %i]\n", b.tryte_H.t0, b.tryte_H.t5);
+    for (int i = 0; i < TSHORT_TRIT_SIZE; i++){
+        Trit_t x = b.trits[i];
+        switch (x) {
+            case TRIT_FALSE:
+                printf("T");
+                break;
+            case TRIT_UNKNOWN:
+                printf("0");
+                break;
+            case TRIT_TRUE:
+                printf("1");
+                break;
+        }    
+    }
+    printf("\n");
     return 0;
 }
